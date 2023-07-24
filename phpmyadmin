@@ -1,0 +1,12 @@
+phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        hostname: 'phpmyadmin'
+        container_name: 'phpmyadmin'
+        links:
+          - database:db
+        environment:
+            MYSQL_USER: root
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: secret
+        ports:
+          - 8000:80
